@@ -44,7 +44,7 @@ const TopNavbar = () => {
               }`}>
                 Company
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-50">
+              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-[100]">
                 <ul className="p-2">
                   <li>
                     <Link to="/company/about" className="block px-3 py-2 hover:bg-accent rounded-md">
@@ -74,7 +74,7 @@ const TopNavbar = () => {
               }`}>
                 Partnerships
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-50 mr-4">
+              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-[100]">
                 <ul className="p-2">
                   <li>
                     <Link to="/partnerships/reseller" className="block px-3 py-2 hover:bg-accent rounded-md">

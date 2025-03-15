@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export const ProductsDropdown = () => (
-  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-50">
+  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-[100]">
     <div className="grid grid-cols-2 gap-4 p-4">
       <Link to="/products/omnichannel-inbox" className="group flex gap-2 p-2 hover:bg-accent rounded-md">
         <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">🔄</div>
@@ -69,7 +69,7 @@ export const ProductsDropdown = () => (
 );
 
 export const IndustryDropdown = () => (
-  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-50">
+  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-[100]">
     <div className="grid grid-cols-2 gap-4 p-4">
       <Link to="/industry/education" className="group flex gap-2 p-2 hover:bg-accent rounded-md">
         <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">📚</div>
@@ -124,7 +124,7 @@ export const IndustryDropdown = () => (
 );
 
 export const ResourcesDropdown = () => (
-  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-50">
+  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-[100]">
     <div className="grid grid-cols-2 gap-4 p-4">
       <div className="col-span-2 mb-2">
         <h2 className="text-lg font-bold text-blue-600">LEARNING</h2>
