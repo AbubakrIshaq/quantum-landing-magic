@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -22,7 +23,7 @@ const Navbar = () => {
     <>
       <TopNavbar />
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 mt-9 ${
           isScrolled 
             ? 'py-3 bg-white/90 backdrop-blur-lg shadow-md' 
             : 'py-5 bg-transparent'
@@ -227,7 +228,7 @@ const Navbar = () => {
                 </NavigationMenuItem>
                 
                 {/* Regular Menu Items */}
-                <li>
+                <li className="mx-2">
                   <a 
                     href="/customers"
                     className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2"
@@ -236,7 +237,7 @@ const Navbar = () => {
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 hover:w-full"></span>
                   </a>
                 </li>
-                <li className="mr-6">
+                <li className="mx-2">
                   <a 
                     href="/pricing"
                     className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2"
@@ -248,7 +249,7 @@ const Navbar = () => {
               </NavigationMenuList>
             </NavigationMenu>
             
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center ml-6 space-x-6">
               <Button 
                 variant="outline"
                 className="hover:bg-accent/10 transition-all duration-300 border-primary text-primary"

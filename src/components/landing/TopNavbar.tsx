@@ -13,10 +13,10 @@ import { ChevronDown } from 'lucide-react';
 
 const TopNavbar = () => {
   return (
-    <div className="w-full bg-white border-b border-gray-100">
-      <div className="max-container px-6 py-1 flex justify-end items-center text-xs">
+    <div className="w-full bg-white border-b border-gray-100 py-1.5"> {/* Added padding-y */}
+      <div className="max-container px-6 flex justify-end items-center text-xs">
         <NavigationMenu className="flex">
-          <NavigationMenuList className="flex space-x-4">
+          <NavigationMenuList className="flex space-x-6"> {/* Increased spacing */}
             {/* Company Dropdown */}
             <NavigationMenuItem>
               <NavigationMenuTrigger className="text-xs py-1 h-auto bg-transparent">
@@ -92,7 +92,7 @@ const TopNavbar = () => {
             </li>
             
             {/* Login Link */}
-            <li className="flex items-center ml-4">
+            <li className="flex items-center ml-6"> {/* Increased spacing */}
               <Link 
                 to="/login" 
                 className="text-xs font-medium text-primary hover:underline"

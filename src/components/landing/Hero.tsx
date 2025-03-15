@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import AnimatedGradient from '../ui/AnimatedGradient';
 import { Link } from 'react-router-dom';
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -29,7 +31,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-16 overflow-hidden bg-primary-50">
+    <div ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-16 overflow-hidden bg-primary-50">
       <div className="absolute top-0 -right-40 w-96 h-96 bg-primary-500/20 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-0 -left-40 w-96 h-96 bg-primary-300/20 rounded-full filter blur-3xl"></div>
       
@@ -38,17 +40,51 @@ const Hero = () => {
           Revolutionizing Team Communication
         </span>
         
-        <h1 className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 text-4xl md:text-6xl lg:text-7xl font-bold mb-6 max-w-4xl leading-tight tracking-tight">
-          Quantum communications for the <span className="text-gradient">modern workspace</span>
-        </h1>
-        
-        <p className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300 text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
-          Simplify workflows, boost productivity, and enhance collaboration with our AI-powered platform that brings all your communication channels together.
-        </p>
+        <Carousel 
+          className="w-full max-w-4xl animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200"
+          autoplay={true}
+          autoplayInterval={5000}
+        >
+          <CarouselContent>
+            <CarouselItem>
+              <div className="flex flex-col items-center">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
+                  Boost Conversions with <span className="text-gradient">AI Revenue Agent</span>
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
+                  Empower your enterprise with AI that transforms customer interactions into lasting value.
+                </p>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="flex flex-col items-center">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
+                  Quantum communications for the <span className="text-gradient">modern workspace</span>
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
+                  Simplify workflows, boost productivity, and enhance collaboration with our AI-powered platform.
+                </p>
+              </div>
+            </CarouselItem>
+            <CarouselItem>
+              <div className="flex flex-col items-center">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight">
+                  Unify your channels with <span className="text-gradient">centralized intelligence</span>
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl">
+                  One platform for all your messaging, email, and social media interactions — powered by AI.
+                </p>
+              </div>
+            </CarouselItem>
+          </CarouselContent>
+        </Carousel>
         
         <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400 flex flex-col sm:flex-row gap-4 mb-16">
-          <Button size="lg" className="btn-primary h-14 px-8 text-base" asChild>
-            <Link to="/signup">Start Free Trial</Link>
+          <Button size="lg" className="btn-primary h-14 px-8 text-base group" asChild>
+            <Link to="/signup">
+              Start Free Trial
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
           <Button size="lg" variant="outline" className="btn-secondary h-14 px-8 text-base" asChild>
             <Link to="/socialflow-ai">Explore with SocialFlow AI</Link>
