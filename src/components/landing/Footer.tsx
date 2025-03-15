@@ -10,11 +10,11 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <a href="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent inline-block">
-                QuantumQuirk
+                SocialFlow
               </a>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Revolutionizing team communication with AI-powered solutions that bring all your channels together in one quantum space.
+              Revolutionizing team communication with AI-powered solutions that bring all your channels together in one social space.
             </p>
             <div className="flex space-x-4">
               <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-accent flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300">
@@ -86,7 +86,7 @@ const Footer = () => {
         
         <div className="border-t border-accent pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} QuantumQuirk. All rights reserved.
+            &copy; {new Date().getFullYear()} SocialFlow. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">
