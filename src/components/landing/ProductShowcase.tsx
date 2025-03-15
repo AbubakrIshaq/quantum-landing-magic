@@ -49,7 +49,7 @@ const ProductShowcase = () => {
               All your channels in one <span className="text-gradient">quantum space</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              QuantumQuirk brings together emails, messages, social media, and customer 
+              SocialFlow brings together emails, messages, social media, and customer 
               communication into a unified dashboard, eliminating the need to switch between apps.
             </p>
             
