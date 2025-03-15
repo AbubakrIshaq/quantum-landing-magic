@@ -33,11 +33,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <div ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-20 md:pt-32 pb-16 overflow-hidden bg-primary-50">
+    <div ref={heroRef} className="relative min-h-screen w-full flex flex-col items-center justify-center pb-10 pt-16 md:pt-32 overflow-hidden bg-primary-50">
       <div className="absolute top-0 -right-40 w-96 h-96 bg-primary-500/20 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-0 -left-40 w-96 h-96 bg-primary-300/20 rounded-full filter blur-3xl"></div>
       
-      <div className="max-container relative z-10 px-4 md:px-6 py-8 md:py-12 lg:py-16 flex flex-col items-center text-center">
+      <div className="max-container relative z-10 w-full px-4 md:px-6 py-4 md:py-12 flex flex-col items-center text-center">
         <span className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent text-primary-900 mb-4 md:mb-6">
           Revolutionizing Team Communication
         </span>
@@ -81,7 +81,7 @@ const Hero = () => {
           </CarouselContent>
         </Carousel>
         
-        <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400 flex flex-col sm:flex-row gap-4 mb-8 md:mb-16 w-full justify-center">
+        <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400 flex flex-col sm:flex-row gap-4 mb-8 md:mb-12 w-full justify-center">
           <Button size={isMobile ? "default" : "lg"} className="btn-primary h-12 md:h-14 px-6 md:px-8 text-sm md:text-base group" asChild>
             <Link to="/signup">
               Start Free Trial
@@ -93,7 +93,7 @@ const Hero = () => {
           </Button>
         </div>
         
-        <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-500 mt-4 relative w-full max-w-6xl mx-auto">
+        <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-500 mt-4 relative w-full max-w-6xl mx-auto px-4 sm:px-0">
           <AnimatedGradient className="rounded-xl md:rounded-3xl shadow-2xl overflow-hidden">
             <div className="relative aspect-[16/9] rounded-xl md:rounded-3xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-primary-900/5 to-primary-900/30"></div>

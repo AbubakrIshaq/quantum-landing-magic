@@ -15,22 +15,26 @@ export function useIsMobile() {
     // Check mobile on initial render
     checkMobile()
     
-    // Debounced resize handler
+    // Debounced resize handler with shorter timeout for more responsiveness
     let resizeTimer: number;
     const handleResize = () => {
       clearTimeout(resizeTimer)
       resizeTimer = window.setTimeout(() => {
         checkMobile()
-      }, 100)
+      }, 50) // Reduced from 100ms to 50ms for faster response
     }
     
     // Add event listener with debounced handler
     window.addEventListener("resize", handleResize)
     
+    // Check again after component is fully mounted
+    const initialCheckTimer = setTimeout(checkMobile, 100)
+    
     // Cleanup
     return () => {
       window.removeEventListener("resize", handleResize)
       clearTimeout(resizeTimer)
+      clearTimeout(initialCheckTimer)
     }
   }, [])
 
