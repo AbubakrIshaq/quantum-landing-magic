@@ -9,6 +9,7 @@ import {
   NavigationMenuTrigger 
 } from "@/components/ui/navigation-menu";
 import { useIsMobile } from '@/hooks/use-mobile';
+import { ChevronDown } from 'lucide-react';
 
 const TopNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,19 +36,38 @@ const TopNavbar = () => {
       <div className="max-container px-6 flex justify-end items-center text-xs">
         <NavigationMenu className="flex">
           <NavigationMenuList className="flex space-x-6">
-            {/* Company Link */}
-            <li className="flex items-center">
-              <Link 
-                to="/company/about" 
-                className={`text-xs ${
-                  isScrolled 
-                    ? 'text-foreground opacity-80 hover:opacity-100' 
-                    : 'text-foreground opacity-80 hover:opacity-100'
-                }`}
-              >
-                Company
-              </Link>
-            </li>
+            {/* Company Dropdown */}
+            <NavigationMenuItem className="flex items-center">
+              <NavigationMenuTrigger className={`text-xs p-0 h-auto bg-transparent hover:bg-transparent ${
+                isScrolled 
+                  ? 'text-foreground opacity-80 hover:opacity-100' 
+                  : 'text-foreground opacity-80 hover:opacity-100'
+              }`}>
+                Company <ChevronDown className="h-3 w-3 ml-1" />
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="bg-white p-3 rounded-lg shadow-lg border z-[9999]">
+                <div className="flex flex-col space-y-2 min-w-[160px]">
+                  <Link 
+                    to="/company/about" 
+                    className="text-sm px-2 py-1.5 hover:bg-accent rounded-md"
+                  >
+                    About Us
+                  </Link>
+                  <Link 
+                    to="/company/careers" 
+                    className="text-sm px-2 py-1.5 hover:bg-accent rounded-md"
+                  >
+                    Careers
+                  </Link>
+                  <Link 
+                    to="/company/newsroom" 
+                    className="text-sm px-2 py-1.5 hover:bg-accent rounded-md"
+                  >
+                    Newsroom
+                  </Link>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
             
             {/* Partnerships Link */}
             <li className="flex items-center">
