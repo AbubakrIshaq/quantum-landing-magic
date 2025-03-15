@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -121,10 +121,7 @@ const Companies = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="hidden md:flex items-center justify-end gap-2 mt-8">
-                <CarouselPrevious className="relative static left-0 right-auto" />
-                <CarouselNext className="relative static right-0 left-auto" />
-              </div>
+              {/* Removed the carousel navigation arrows as requested */}
             </Carousel>
           </div>
 
@@ -152,7 +149,7 @@ const Companies = () => {
           </div>
 
           <div className="max-w-6xl mx-auto">
-            {/* Channel Selector */}
+            {/* Channel Selector - made into a single div as requested */}
             <div className="flex justify-center gap-4 md:gap-8 flex-wrap md:flex-nowrap mb-12">
               {channels.map((channel) => (
                 <button
@@ -169,7 +166,7 @@ const Companies = () => {
               ))}
             </div>
 
-            {/* Channel Content */}
+            {/* Combined Channel Content in a Single Div */}
             <div className="bg-white rounded-xl shadow-soft p-8 md:p-12">
               {channels.map((channel) => (
                 <div 
@@ -213,7 +210,7 @@ const Companies = () => {
                     
                     <div className="relative rounded-xl overflow-hidden shadow-md h-[400px] bg-gradient-to-br from-accent to-white">
                       <img
-                        src={`/public/lovable-uploads/${channel.id === "marketing" ? "720d49b4-a77d-4fd8-b0b5-3f7e661bf6ef.png" : channel.id === "sales" ? "6bf4fd0b-9a89-42fc-9346-342948be5980.png" : "22599a04-a2a0-497b-b3e5-8a0b886b0481.png"}`}
+                        src={`/lovable-uploads/${channel.id === "marketing" ? "720d49b4-a77d-4fd8-b0b5-3f7e661bf6ef.png" : channel.id === "sales" ? "6bf4fd0b-9a89-42fc-9346-342948be5980.png" : "22599a04-a2a0-497b-b3e5-8a0b886b0481.png"}`}
                         alt={`${channel.title} illustration`}
                         className="w-full h-full object-contain p-6"
                       />
