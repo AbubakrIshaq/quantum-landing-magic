@@ -10,9 +10,11 @@ import {
   NavigationMenuTrigger 
 } from "@/components/ui/navigation-menu";
 import { ChevronDown } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const TopNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +24,11 @@ const TopNavbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Hide TopNavbar on mobile devices
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <div className={`w-full py-2 transition-all duration-300 ${
