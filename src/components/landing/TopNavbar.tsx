@@ -33,7 +33,9 @@ const TopNavbar = () => {
             {/* Company Dropdown */}
             <NavigationMenuItem>
               <NavigationMenuTrigger className={`text-xs py-1 h-auto bg-transparent ${
-                isScrolled ? 'text-foreground' : 'text-white'
+                isScrolled 
+                  ? 'text-foreground opacity-80 hover:opacity-100' 
+                  : 'text-white hover:text-gray-100'
               }`}>
                 Company <ChevronDown className="h-3 w-3 ml-1" />
               </NavigationMenuTrigger>
@@ -61,7 +63,9 @@ const TopNavbar = () => {
             {/* Partnerships Dropdown */}
             <NavigationMenuItem>
               <NavigationMenuTrigger className={`text-xs py-1 h-auto bg-transparent ${
-                isScrolled ? 'text-foreground' : 'text-white'
+                isScrolled 
+                  ? 'text-foreground opacity-80 hover:opacity-100' 
+                  : 'text-white hover:text-gray-100'
               }`}>
                 Partnerships <ChevronDown className="h-3 w-3 ml-1" />
               </NavigationMenuTrigger>
@@ -104,7 +108,9 @@ const TopNavbar = () => {
             {/* Contact Us Link */}
             <li className="flex items-center">
               <Link to="/contact-us" className={`text-xs ${
-                isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-gray-100'
+                isScrolled 
+                  ? 'text-foreground opacity-80 hover:opacity-100' 
+                  : 'text-white hover:text-gray-100'
               }`}>
                 Contact Us
               </Link>
@@ -115,7 +121,9 @@ const TopNavbar = () => {
               <Link 
                 to="/login" 
                 className={`text-xs font-medium ${
-                  isScrolled ? 'text-foreground hover:text-primary' : 'text-white hover:text-gray-100'
+                  isScrolled 
+                    ? 'text-foreground opacity-80 hover:opacity-100' 
+                    : 'text-white hover:text-gray-100'
                 }`}
               >
                 Login
