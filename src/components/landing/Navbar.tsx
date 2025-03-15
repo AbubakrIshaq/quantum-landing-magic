@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -21,9 +20,9 @@ const Navbar = () => {
 
   return (
     <>
-      <TopNavbar />
+      <div className="h-[40px]"></div> {/* Spacer for the TopNavbar */}
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 mt-9 ${
+        className={`fixed top-[40px] left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled 
             ? 'py-3 bg-white/90 backdrop-blur-lg shadow-md' 
             : 'py-5 bg-transparent'
@@ -39,7 +38,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-4">
             <NavigationMenu className="hidden md:block">
               <NavigationMenuList className="flex items-center space-x-8">
                 {/* Products Dropdown */}
@@ -47,7 +46,7 @@ const Navbar = () => {
                   <NavigationMenuTrigger className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2 bg-transparent">
                     Products <ChevronDown className="h-4 w-4 ml-1" />
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px]">
+                  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-50">
                     <div className="grid grid-cols-2 gap-4 p-4">
                       <Link to="/products/omnichannel-inbox" className="group flex gap-2 p-2 hover:bg-accent rounded-md">
                         <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">🔄</div>
@@ -114,7 +113,7 @@ const Navbar = () => {
                   <NavigationMenuTrigger className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2 bg-transparent">
                     Industry <ChevronDown className="h-4 w-4 ml-1" />
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px]">
+                  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-50">
                     <div className="grid grid-cols-2 gap-4 p-4">
                       <Link to="/industry/education" className="group flex gap-2 p-2 hover:bg-accent rounded-md">
                         <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">📚</div>
@@ -173,7 +172,7 @@ const Navbar = () => {
                   <NavigationMenuTrigger className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2 bg-transparent">
                     Resources <ChevronDown className="h-4 w-4 ml-1" />
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px]">
+                  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-lg border min-w-[500px] z-50">
                     <div className="grid grid-cols-2 gap-4 p-4">
                       <div className="col-span-2 mb-2">
                         <h2 className="text-lg font-bold text-blue-600">LEARNING</h2>
@@ -282,7 +281,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg p-5 border-t border-gray-100 animate-fade-in">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg p-5 border-t border-gray-100 animate-fade-in z-50">
             <ul className="flex flex-col space-y-4">
               <li className="border-b border-gray-100 pb-2">
                 <button 

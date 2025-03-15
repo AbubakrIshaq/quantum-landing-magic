@@ -13,16 +13,16 @@ import { ChevronDown } from 'lucide-react';
 
 const TopNavbar = () => {
   return (
-    <div className="w-full bg-white border-b border-gray-100 py-1.5"> {/* Added padding-y */}
+    <div className="w-full bg-[rgb(221,136,207)] py-2 sticky top-0 z-50"> {/* Updated background color and made sticky */}
       <div className="max-container px-6 flex justify-end items-center text-xs">
         <NavigationMenu className="flex">
-          <NavigationMenuList className="flex space-x-6"> {/* Increased spacing */}
+          <NavigationMenuList className="flex space-x-6"> {/* Kept spacing */}
             {/* Company Dropdown */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-xs py-1 h-auto bg-transparent">
+              <NavigationMenuTrigger className="text-xs py-1 h-auto bg-transparent text-white">
                 Company <ChevronDown className="h-3 w-3 ml-1" />
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px]">
+              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-50">
                 <ul className="p-2">
                   <li>
                     <Link to="/company/about" className="block px-3 py-2 hover:bg-accent rounded-md">
@@ -45,10 +45,10 @@ const TopNavbar = () => {
             
             {/* Partnerships Dropdown */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-xs py-1 h-auto bg-transparent">
+              <NavigationMenuTrigger className="text-xs py-1 h-auto bg-transparent text-white">
                 Partnerships <ChevronDown className="h-3 w-3 ml-1" />
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px]">
+              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-50 mr-4">
                 <ul className="p-2">
                   <li>
                     <Link to="/partnerships/reseller" className="block px-3 py-2 hover:bg-accent rounded-md">
@@ -86,16 +86,16 @@ const TopNavbar = () => {
             
             {/* Contact Us Link */}
             <li className="flex items-center">
-              <Link to="/contact-us" className="text-xs text-foreground opacity-80 hover:opacity-100">
+              <Link to="/contact-us" className="text-xs text-white hover:text-gray-100">
                 Contact Us
               </Link>
             </li>
             
             {/* Login Link */}
-            <li className="flex items-center ml-6"> {/* Increased spacing */}
+            <li className="flex items-center ml-6"> {/* Kept spacing */}
               <Link 
                 to="/login" 
-                className="text-xs font-medium text-primary hover:underline"
+                className="text-xs font-medium text-white hover:text-gray-100"
               >
                 Login
               </Link>
