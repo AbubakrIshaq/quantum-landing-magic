@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { ProductsDropdown, IndustryDropdown, ResourcesDropdown } from './NavbarDropdowns';
+
 const DesktopMenu = () => {
   return <div className="hidden md:flex items-center space-x-4">
       <NavigationMenu className="hidden md:block">
@@ -11,7 +12,7 @@ const DesktopMenu = () => {
           {/* Products Dropdown */}
           <NavigationMenuItem>
             <NavigationMenuTrigger className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2 bg-transparent">
-              Products <ChevronDown className="h-4 w-4 ml-1" />
+              Products
             </NavigationMenuTrigger>
             <ProductsDropdown />
           </NavigationMenuItem>
@@ -19,7 +20,7 @@ const DesktopMenu = () => {
           {/* Industry Dropdown */}
           <NavigationMenuItem>
             <NavigationMenuTrigger className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2 bg-transparent">
-              Industry <ChevronDown className="h-4 w-4 ml-1" />
+              Industry
             </NavigationMenuTrigger>
             <IndustryDropdown />
           </NavigationMenuItem>
@@ -27,7 +28,7 @@ const DesktopMenu = () => {
           {/* Resources Dropdown */}
           <NavigationMenuItem>
             <NavigationMenuTrigger className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2 bg-transparent">
-              Resources <ChevronDown className="h-4 w-4 ml-1" />
+              Resources
             </NavigationMenuTrigger>
             <ResourcesDropdown />
           </NavigationMenuItem>
@@ -58,4 +59,5 @@ const DesktopMenu = () => {
       </div>
     </div>;
 };
+
 export default DesktopMenu;

@@ -5,11 +5,9 @@ import {
   NavigationMenu, 
   NavigationMenuContent, 
   NavigationMenuItem, 
-  NavigationMenuLink, 
   NavigationMenuList, 
   NavigationMenuTrigger 
 } from "@/components/ui/navigation-menu";
-import { ChevronDown } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const TopNavbar = () => {
@@ -44,7 +42,7 @@ const TopNavbar = () => {
                   ? 'text-foreground opacity-80 hover:opacity-100' 
                   : 'text-foreground opacity-80 hover:opacity-100'
               }`}>
-                Company <ChevronDown className="h-3 w-3 ml-1" />
+                Company
               </NavigationMenuTrigger>
               <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-50">
                 <ul className="p-2">
@@ -74,7 +72,7 @@ const TopNavbar = () => {
                   ? 'text-foreground opacity-80 hover:opacity-100' 
                   : 'text-foreground opacity-80 hover:opacity-100'
               }`}>
-                Partnerships <ChevronDown className="h-3 w-3 ml-1" />
+                Partnerships
               </NavigationMenuTrigger>
               <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-50 mr-4">
                 <ul className="p-2">
