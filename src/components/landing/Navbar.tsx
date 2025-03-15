@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -234,7 +233,7 @@ const Navbar = () => {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 hover:w-full"></span>
                 </a>
               </li>
-              <li>
+              <li className="mr-6">
                 <a 
                   href="/pricing"
                   className="relative font-medium text-sm text-foreground opacity-80 hover:opacity-100 transition-all duration-300 py-2"
@@ -246,7 +245,7 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
           
-          <div className="ml-8 flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
             <Button 
               variant="outline"
               className="hover:bg-accent/10 transition-all duration-300 border-primary text-primary"
