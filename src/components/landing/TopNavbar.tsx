@@ -65,15 +65,34 @@ const TopNavbar = () => {
               </NavigationMenuContent>
             </NavigationMenuItem>
             
-            {/* Partnerships Link */}
-            <li className="flex items-center">
-              <Link 
-                to="/partnerships/reseller" 
-                className="text-xs text-foreground"
-              >
+            {/* Partnerships Dropdown */}
+            <NavigationMenuItem className="flex items-center">
+              <NavigationMenuTrigger className={`text-xs p-0 h-auto bg-transparent hover:bg-transparent text-foreground`}>
                 Partnerships
-              </Link>
-            </li>
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="bg-white p-3 rounded-lg shadow-lg border z-[9999] absolute">
+                <div className="flex flex-col space-y-2 min-w-[160px]">
+                  <Link 
+                    to="/partnerships/reseller" 
+                    className="text-sm px-2 py-1.5 hover:bg-accent rounded-md"
+                  >
+                    Reseller Program
+                  </Link>
+                  <Link 
+                    to="/partnerships/affiliate" 
+                    className="text-sm px-2 py-1.5 hover:bg-accent rounded-md"
+                  >
+                    Affiliate Program
+                  </Link>
+                  <Link 
+                    to="/partnerships/technology" 
+                    className="text-sm px-2 py-1.5 hover:bg-accent rounded-md"
+                  >
+                    Technology Partners
+                  </Link>
+                </div>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
             
             {/* Contact Us Link */}
             <li className="flex items-center">
