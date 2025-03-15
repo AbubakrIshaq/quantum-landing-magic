@@ -38,14 +38,10 @@ const TopNavbar = () => {
           <NavigationMenuList className="flex space-x-6">
             {/* Company Dropdown */}
             <NavigationMenuItem className="flex items-center">
-              <NavigationMenuTrigger className={`text-xs p-0 h-auto bg-transparent hover:bg-transparent ${
-                isScrolled 
-                  ? 'text-foreground opacity-80 hover:opacity-100' 
-                  : 'text-foreground opacity-80 hover:opacity-100'
-              }`}>
-                Company <ChevronDown className="h-3 w-3 ml-1" />
+              <NavigationMenuTrigger className={`text-xs p-0 h-auto bg-transparent hover:bg-transparent text-foreground`}>
+                Company
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white p-3 rounded-lg shadow-lg border z-[9999]">
+              <NavigationMenuContent className="bg-white p-3 rounded-lg shadow-lg border z-[9999] absolute">
                 <div className="flex flex-col space-y-2 min-w-[160px]">
                   <Link 
                     to="/company/about" 
@@ -57,7 +53,7 @@ const TopNavbar = () => {
                     to="/company/careers" 
                     className="text-sm px-2 py-1.5 hover:bg-accent rounded-md"
                   >
-                    Careers
+                    Career
                   </Link>
                   <Link 
                     to="/company/newsroom" 
@@ -73,11 +69,7 @@ const TopNavbar = () => {
             <li className="flex items-center">
               <Link 
                 to="/partnerships/reseller" 
-                className={`text-xs ${
-                  isScrolled 
-                    ? 'text-foreground opacity-80 hover:opacity-100' 
-                    : 'text-foreground opacity-80 hover:opacity-100'
-                }`}
+                className="text-xs text-foreground"
               >
                 Partnerships
               </Link>
@@ -87,11 +79,7 @@ const TopNavbar = () => {
             <li className="flex items-center">
               <Link 
                 to="/contact-us" 
-                className={`text-xs ${
-                  isScrolled 
-                    ? 'text-foreground opacity-80 hover:opacity-100' 
-                    : 'text-foreground opacity-80 hover:opacity-100'
-                }`}
+                className="text-xs text-foreground"
               >
                 Contact Us
               </Link>
@@ -101,11 +89,7 @@ const TopNavbar = () => {
             <li className="flex items-center ml-6">
               <Link 
                 to="/login" 
-                className={`text-xs font-medium ${
-                  isScrolled 
-                    ? 'text-foreground opacity-80 hover:opacity-100' 
-                    : 'text-foreground opacity-80 hover:opacity-100'
-                }`}
+                className="text-xs font-medium text-foreground"
               >
                 Login
               </Link>
