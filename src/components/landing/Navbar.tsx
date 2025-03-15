@@ -66,8 +66,8 @@ const Navbar = () => {
         <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
       </header>
       
-      {/* TopNavbar now placed below the main navbar */}
-      <div className="h-[70px]"></div> {/* Spacer for the main Navbar */}
+      {/* TopNavbar placed below with fixed positioning - no spacer needed */}
+      <div className="h-[70px]"></div> {/* Spacer for the main Navbar only */}
       <TopNavbar />
     </>
   );

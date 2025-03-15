@@ -13,7 +13,7 @@ const PageTemplate = ({ children, title, subtitle }: PageTemplateProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-36"> {/* Adjusted top padding for both navbars */}
+      <main className="flex-grow pt-[120px]"> {/* Adjusted padding for both navbars */}
         <div className="max-container px-6 py-16">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{title}</h1>
