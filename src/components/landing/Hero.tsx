@@ -1,7 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 import AnimatedGradient from '../ui/AnimatedGradient';
 
 const Hero = () => {
@@ -27,13 +26,6 @@ const Hero = () => {
       heroElements?.forEach((el) => observer.unobserve(el));
     };
   }, []);
-
-  const scrollToNextSection = () => {
-    const companiesSection = document.getElementById('companies');
-    if (companiesSection) {
-      companiesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-16 overflow-hidden bg-primary-50">
@@ -67,8 +59,8 @@ const Hero = () => {
             <div className="relative aspect-[16/9] rounded-3xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-primary-900/5 to-primary-900/30"></div>
               <img 
-                src="/lovable-uploads/bf72956b-108c-45b0-884d-4b871eab57ad.png" 
-                alt="QuantumQuirk Platform Dashboard" 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                alt="SocialFlow Platform Dashboard" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -83,14 +75,6 @@ const Hero = () => {
           </AnimatedGradient>
         </div>
       </div>
-      
-      <button 
-        onClick={scrollToNextSection}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white/80 rounded-full p-3 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-1 animate-bounce"
-        aria-label="Scroll to next section"
-      >
-        <ChevronDown className="w-6 h-6 text-primary" />
-      </button>
     </div>
   );
 };

@@ -39,8 +39,8 @@ const Index = () => {
       <Companies />
       <Features />
       <ProductShowcase />
-      <Testimonials />
       <Cta />
+      <Testimonials />
       <Footer />
     </div>
   );

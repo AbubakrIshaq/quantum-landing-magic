@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
@@ -19,7 +18,7 @@ const channels = [
   {
     id: "marketing",
     title: "Marketing",
-    icon: "/lovable-uploads/720d49b4-a77d-4fd8-b0b5-3f7e661bf6ef.png",
+    icon: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     points: [
       "Capture leads and first-party data through click-to-chat links, ads, QR codes, website widgets",
       "Automate marketing campaigns to guide customers from discovery to purchase and foster loyalty",
@@ -29,7 +28,7 @@ const channels = [
   {
     id: "sales",
     title: "Sales",
-    icon: "/lovable-uploads/6bf4fd0b-9a89-42fc-9346-342948be5980.png",
+    icon: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
     points: [
       "Automate lead qualification and routing based on deal size, industry and offline touchpoints",
       "Recommend products using an in-chat catalog and close sales instantly with payment links",
@@ -39,7 +38,7 @@ const channels = [
   {
     id: "support",
     title: "Support",
-    icon: "/lovable-uploads/22599a04-a2a0-497b-b3e5-8a0b886b0481.png",
+    icon: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
     points: [
       "Create AI chatbots to guide customers through self-service options and collect context for escalation",
       "Auto-route chats to agents, maximizing support efficiency through team collaboration tools",
@@ -121,13 +120,12 @@ const Companies = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              {/* Removed the carousel navigation arrows as requested */}
             </Carousel>
           </div>
 
           <div className="mt-16 max-w-4xl mx-auto text-center">
             <p className="text-lg text-muted-foreground">
-              Join thousands of innovative businesses using QuantumQuirk to streamline their communication and boost productivity.
+              Join thousands of innovative businesses using SocialFlow to streamline their communication and boost productivity.
             </p>
           </div>
         </div>
@@ -149,7 +147,6 @@ const Companies = () => {
           </div>
 
           <div className="max-w-6xl mx-auto">
-            {/* Channel Selector - made into a single div as requested */}
             <div className="flex justify-center gap-4 md:gap-8 flex-wrap md:flex-nowrap mb-12">
               {channels.map((channel) => (
                 <button
@@ -166,7 +163,6 @@ const Companies = () => {
               ))}
             </div>
 
-            {/* Combined Channel Content in a Single Div */}
             <div className="bg-white rounded-xl shadow-soft p-8 md:p-12">
               {channels.map((channel) => (
                 <div 
@@ -182,7 +178,7 @@ const Companies = () => {
                           <img 
                             src={channel.icon} 
                             alt={`${channel.title} icon`} 
-                            className="h-8"
+                            className="h-8 w-8 object-cover"
                           />
                         </div>
                         <h2 className="text-2xl md:text-3xl font-bold text-primary">{channel.title}</h2>
@@ -210,9 +206,9 @@ const Companies = () => {
                     
                     <div className="relative rounded-xl overflow-hidden shadow-md h-[400px] bg-gradient-to-br from-accent to-white">
                       <img
-                        src={`/lovable-uploads/${channel.id === "marketing" ? "720d49b4-a77d-4fd8-b0b5-3f7e661bf6ef.png" : channel.id === "sales" ? "6bf4fd0b-9a89-42fc-9346-342948be5980.png" : "22599a04-a2a0-497b-b3e5-8a0b886b0481.png"}`}
+                        src={channel.icon}
                         alt={`${channel.title} illustration`}
-                        className="w-full h-full object-contain p-6"
+                        className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
