@@ -6,6 +6,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import BookDemo from "./pages/BookDemo";
+import Signup from "./pages/Signup";
 
 // Product pages
 import OmnichannelInbox from "./pages/products/OmnichannelInbox";
@@ -26,6 +28,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          
+          {/* Authentication and Demo Routes */}
+          <Route path="/book-demo" element={<BookDemo />} />
+          <Route path="/signup" element={<Signup />} />
           
           {/* Product Routes */}
           <Route path="/products/omnichannel-inbox" element={<OmnichannelInbox />} />

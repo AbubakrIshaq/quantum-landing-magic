@@ -248,9 +248,17 @@ const Navbar = () => {
           
           <div className="ml-8 flex items-center space-x-4">
             <Button 
-              className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
+              variant="outline"
+              className="hover:bg-accent/10 transition-all duration-300 border-primary text-primary"
+              asChild
             >
-              Get Started
+              <Link to="/book-demo">Book Demo</Link>
+            </Button>
+            <Button 
+              className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
+              asChild
+            >
+              <Link to="/signup">Start for Free</Link>
             </Button>
           </div>
         </div>
@@ -321,9 +329,17 @@ const Navbar = () => {
           </ul>
           <div className="mt-6 flex flex-col space-y-3">
             <Button 
-              className="w-full justify-center bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
+              variant="outline"
+              className="w-full justify-center hover:bg-accent/10 transition-all duration-300 border-primary text-primary"
+              asChild
             >
-              Get Started
+              <Link to="/book-demo">Book Demo</Link>
+            </Button>
+            <Button 
+              className="w-full justify-center bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
+              asChild
+            >
+              <Link to="/signup">Start for Free</Link>
             </Button>
           </div>
         </div>
