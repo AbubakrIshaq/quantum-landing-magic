@@ -29,9 +29,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="h-[40px]"></div> {/* Spacer for the TopNavbar */}
       <header 
-        className={`fixed top-[40px] left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
             ? 'py-3 bg-white/90 backdrop-blur-lg shadow-md' 
             : 'py-5 bg-transparent'
@@ -66,6 +65,10 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
       </header>
+      
+      {/* TopNavbar now placed below the main navbar */}
+      <div className="h-[70px]"></div> {/* Spacer for the main Navbar */}
+      <TopNavbar />
     </>
   );
 };
