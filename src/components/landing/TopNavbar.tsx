@@ -29,7 +29,7 @@ const TopNavbar = () => {
   }
 
   return (
-    <div className={`w-full py-2 transition-all duration-300 ${
+    <div className={`w-full py-2 transition-all duration-300 relative z-[100] ${
       isScrolled ? 'bg-white' : 'bg-transparent'
     }`}>
       <div className="max-container px-6 flex justify-end items-center text-xs">
@@ -44,7 +44,7 @@ const TopNavbar = () => {
               }`}>
                 Company
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-[100]">
+              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px]">
                 <ul className="p-2">
                   <li>
                     <Link to="/company/about" className="block px-3 py-2 hover:bg-accent rounded-md">
@@ -74,7 +74,7 @@ const TopNavbar = () => {
               }`}>
                 Partnerships
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px] z-[100]">
+              <NavigationMenuContent className="bg-white rounded-lg shadow-lg border min-w-[200px]">
                 <ul className="p-2">
                   <li>
                     <Link to="/partnerships/reseller" className="block px-3 py-2 hover:bg-accent rounded-md">
