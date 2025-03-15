@@ -35,7 +35,7 @@ const TopNavbar = () => {
               <NavigationMenuTrigger className={`text-xs py-1 h-auto bg-transparent ${
                 isScrolled 
                   ? 'text-foreground opacity-80 hover:opacity-100' 
-                  : 'text-white hover:text-gray-100'
+                  : 'text-foreground opacity-80 hover:opacity-100'
               }`}>
                 Company <ChevronDown className="h-3 w-3 ml-1" />
               </NavigationMenuTrigger>
@@ -65,7 +65,7 @@ const TopNavbar = () => {
               <NavigationMenuTrigger className={`text-xs py-1 h-auto bg-transparent ${
                 isScrolled 
                   ? 'text-foreground opacity-80 hover:opacity-100' 
-                  : 'text-white hover:text-gray-100'
+                  : 'text-foreground opacity-80 hover:opacity-100'
               }`}>
                 Partnerships <ChevronDown className="h-3 w-3 ml-1" />
               </NavigationMenuTrigger>
@@ -110,7 +110,7 @@ const TopNavbar = () => {
               <Link to="/contact-us" className={`text-xs ${
                 isScrolled 
                   ? 'text-foreground opacity-80 hover:opacity-100' 
-                  : 'text-white hover:text-gray-100'
+                  : 'text-foreground opacity-80 hover:opacity-100'
               }`}>
                 Contact Us
               </Link>
@@ -123,7 +123,7 @@ const TopNavbar = () => {
                 className={`text-xs font-medium ${
                   isScrolled 
                     ? 'text-foreground opacity-80 hover:opacity-100' 
-                    : 'text-white hover:text-gray-100'
+                    : 'text-foreground opacity-80 hover:opacity-100'
                 }`}
               >
                 Login
