@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -13,7 +12,7 @@ import { ChevronDown } from 'lucide-react';
 
 const TopNavbar = () => {
   return (
-    <div className="w-full bg-primary-900 py-2 fixed top-[70px] z-40"> {/* Changed to fixed and primary-900 color */}
+    <div className="w-full bg-primary-900 py-2">
       <div className="max-container px-6 flex justify-end items-center text-xs">
         <NavigationMenu className="flex">
           <NavigationMenuList className="flex space-x-6">

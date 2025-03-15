@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -28,9 +27,9 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`w-full transition-all duration-300 ${
           isScrolled 
             ? 'py-3 bg-white/90 backdrop-blur-lg shadow-md' 
             : 'py-5 bg-transparent'
@@ -66,10 +65,9 @@ const Navbar = () => {
         <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
       </header>
       
-      {/* TopNavbar placed below with fixed positioning - no spacer needed */}
-      <div className="h-[70px]"></div> {/* Spacer for the main Navbar only */}
+      {/* TopNavbar fixed below the main navbar */}
       <TopNavbar />
-    </>
+    </div>
   );
 };
 
