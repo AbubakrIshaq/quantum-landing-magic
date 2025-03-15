@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/landing/Navbar';
 import Hero from '@/components/landing/Hero';
+import Companies from '@/components/landing/Companies';
 import Features from '@/components/landing/Features';
 import Testimonials from '@/components/landing/Testimonials';
 import ProductShowcase from '@/components/landing/ProductShowcase';
@@ -35,6 +36,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <Hero />
+      <Companies />
       <Features />
       <Testimonials />
       <ProductShowcase />

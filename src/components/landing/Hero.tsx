@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import AnimatedGradient from '../ui/AnimatedGradient';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -28,18 +29,18 @@ const Hero = () => {
   }, []);
 
   const scrollToNextSection = () => {
-    const featuresSection = document.getElementById('features');
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    const companiesSection = document.getElementById('companies');
+    if (companiesSection) {
+      companiesSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <div ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-16 overflow-hidden">
+    <div ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-16 overflow-hidden bg-primary-50">
       <div className="absolute top-0 -right-40 w-96 h-96 bg-primary-500/20 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-0 -left-40 w-96 h-96 bg-primary-300/20 rounded-full filter blur-3xl"></div>
       
-      <div className="max-container relative z-10 px-6 py-24 md:py-32 flex flex-col items-center text-center">
+      <div className="max-container relative z-10 px-6 py-12 md:py-16 flex flex-col items-center text-center">
         <span className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent text-primary-900 mb-6">
           Revolutionizing Team Communication
         </span>
@@ -61,23 +62,25 @@ const Hero = () => {
           </Button>
         </div>
         
-        <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-500 mt-8 relative">
-          <div className="px-6 py-8 glass-card max-w-5xl mx-auto">
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-accent/50 shadow-soft">
-              <div className="absolute inset-0 bg-primary-900/5 backdrop-blur-sm flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/90 shadow-md cursor-pointer hover:scale-105 transition-transform duration-300">
-                  <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-primary-900 border-b-8 border-b-transparent ml-1"></div>
+        <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-500 mt-4 relative w-full max-w-6xl mx-auto">
+          <AnimatedGradient className="rounded-3xl shadow-2xl overflow-hidden">
+            <div className="relative aspect-[16/9] rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary-900/5 to-primary-900/30"></div>
+              <img 
+                src="/lovable-uploads/bf72956b-108c-45b0-884d-4b871eab57ad.png" 
+                alt="QuantumQuirk Platform Dashboard" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="flex flex-col items-center">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/90 shadow-md cursor-pointer hover:scale-105 transition-transform duration-300">
+                    <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-primary-900 border-b-8 border-b-transparent ml-1"></div>
+                  </div>
+                  <p className="mt-4 text-white text-lg font-medium bg-primary-900/70 px-4 py-2 rounded-full">Watch how it works</p>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/20 to-transparent"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                alt="QuantumQuirk Platform" 
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
             </div>
-          </div>
+          </AnimatedGradient>
         </div>
       </div>
       

@@ -36,7 +36,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-1">
           <ul className="flex items-center space-x-8">
-            {['Features', 'Solutions', 'Pricing', 'Resources', 'About'].map((item) => (
+            {['Products', 'Industry', 'Resources', 'Customers', 'Pricing'].map((item) => (
               <li key={item}>
                 <a 
                   href={`#${item.toLowerCase()}`}
@@ -49,12 +49,6 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="ml-8 flex items-center space-x-4">
-            <Button 
-              variant="ghost" 
-              className="text-sm font-medium text-foreground"
-            >
-              Log In
-            </Button>
             <Button 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
             >
@@ -81,7 +75,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg p-5 border-t border-gray-100 animate-fade-in">
           <ul className="flex flex-col space-y-4">
-            {['Features', 'Solutions', 'Pricing', 'Resources', 'About'].map((item) => (
+            {['Products', 'Industry', 'Resources', 'Customers', 'Pricing'].map((item) => (
               <li key={item}>
                 <a 
                   href={`#${item.toLowerCase()}`}
@@ -94,12 +88,6 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="mt-6 flex flex-col space-y-3">
-            <Button 
-              variant="ghost" 
-              className="w-full justify-center text-foreground"
-            >
-              Log In
-            </Button>
             <Button 
               className="w-full justify-center bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
             >
