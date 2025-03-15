@@ -29,8 +29,8 @@ const Navbar = () => {
       <div className="max-container flex items-center justify-between px-6 lg:px-10">
         <div className="flex items-center">
           <a href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent animate-pulse-slow">
-              SocialFlow<span className="text-indigo-500">✨</span>
+            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              SocialFlow<span className="text-indigo-500">✦</span>
             </span>
           </a>
         </div>
@@ -252,7 +252,7 @@ const Navbar = () => {
               className="hover:bg-accent/10 transition-all duration-300 border-primary text-primary"
               asChild
             >
-              <Link to="/socialflow-ai">Explore with SocialFlow AI</Link>
+              <Link to="/book-demo">Book a Demo</Link>
             </Button>
             <Button 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
@@ -333,7 +333,7 @@ const Navbar = () => {
               className="w-full justify-center hover:bg-accent/10 transition-all duration-300 border-primary text-primary"
               asChild
             >
-              <Link to="/socialflow-ai">Explore with SocialFlow AI</Link>
+              <Link to="/book-demo">Book a Demo</Link>
             </Button>
             <Button 
               className="w-full justify-center bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"

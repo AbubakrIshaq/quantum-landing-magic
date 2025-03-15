@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import AnimatedGradient from '../ui/AnimatedGradient';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -46,11 +47,11 @@ const Hero = () => {
         </p>
         
         <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400 flex flex-col sm:flex-row gap-4 mb-16">
-          <Button size="lg" className="btn-primary h-14 px-8 text-base">
-            Start Free Trial
+          <Button size="lg" className="btn-primary h-14 px-8 text-base" asChild>
+            <Link to="/signup">Start Free Trial</Link>
           </Button>
-          <Button size="lg" variant="outline" className="btn-secondary h-14 px-8 text-base">
-            Book a Demo
+          <Button size="lg" variant="outline" className="btn-secondary h-14 px-8 text-base" asChild>
+            <Link to="/socialflow-ai">Explore with SocialFlow AI</Link>
           </Button>
         </div>
         

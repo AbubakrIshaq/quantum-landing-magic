@@ -56,14 +56,6 @@ const Cta = () => {
               >
                 <Link to="/signup">Start Free Trial</Link>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="btn-secondary h-14 px-8 text-base hover:bg-accent/10 transition-all duration-300 border-primary text-primary"
-                asChild
-              >
-                <Link to="/socialflow-ai">Explore with SocialFlow AI</Link>
-              </Button>
             </div>
             
             <p className="text-sm text-muted-foreground">
