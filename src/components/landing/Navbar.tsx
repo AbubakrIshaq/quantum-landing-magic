@@ -37,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[90] flex flex-col">
+    <div className="fixed top-0 left-0 right-0 z-[990] flex flex-col">
       <TopNavbar />
       <header 
         className={`w-full transition-all duration-300 ${
