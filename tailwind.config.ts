@@ -133,6 +133,10 @@ export default {
           '0%': { filter: 'blur(5px)', opacity: '0' },
           '100%': { filter: 'blur(0)', opacity: '1' },
         },
+        'carousel': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-100% / 2))' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -147,6 +151,7 @@ export default {
         'gradient-shift': 'gradient-shift 8s ease infinite',
         'rotate-slow': 'rotate-slow 12s linear infinite',
         'blur-in': 'blur-in 0.6s ease-out',
+        'carousel': 'carousel 25s linear infinite',
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(135deg, rgb(75, 22, 76) 0%, rgb(221, 136, 207) 100%)',
