@@ -1,6 +1,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Cta = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -48,11 +49,20 @@ const Cta = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
-              <Button size="lg" className="btn-primary h-14 px-8 text-base">
-                Start Free Trial
+              <Button 
+                size="lg" 
+                className="btn-primary h-14 px-8 text-base bg-gradient-primary hover:shadow-glow transition-all duration-300 text-white"
+                asChild
+              >
+                <Link to="/signup">Start Free Trial</Link>
               </Button>
-              <Button size="lg" variant="outline" className="btn-secondary h-14 px-8 text-base">
-                Schedule a Demo
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="btn-secondary h-14 px-8 text-base hover:bg-accent/10 transition-all duration-300 border-primary text-primary"
+                asChild
+              >
+                <Link to="/socialflow-ai">Explore with SocialFlow AI</Link>
               </Button>
             </div>
             

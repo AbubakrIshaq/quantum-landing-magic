@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import BookDemo from "./pages/BookDemo";
 import Signup from "./pages/Signup";
+import SocialFlowAI from "./pages/SocialFlowAI";
+import Pricing from "./pages/Pricing";
 
 // Product pages
 import OmnichannelInbox from "./pages/products/OmnichannelInbox";
@@ -32,6 +34,8 @@ const App = () => (
           {/* Authentication and Demo Routes */}
           <Route path="/book-demo" element={<BookDemo />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/socialflow-ai" element={<SocialFlowAI />} />
+          <Route path="/pricing" element={<Pricing />} />
           
           {/* Product Routes */}
           <Route path="/products/omnichannel-inbox" element={<OmnichannelInbox />} />
